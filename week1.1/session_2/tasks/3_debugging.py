@@ -3,8 +3,8 @@
 
 # Find and fix the errors
 
-name = imput("Enter your name: ")
-int(age) = input("Enter your age: ")
- city = input("Enter your city: ")
+name = input("Enter your name: ") #input was spelt wrong
+age = int(input("Enter your age: ")) #format of line was int(age) = input("Enter your age: ")
+city = str(input("Enter your city: ")) # there was a space at start of line and variable was notspecified as string
 
-print("Hello {name}, you are {age} years old and live in {city}.")
+print(f"Hello {name}, you are {age} years old and live in {city}.")# incorrect insetion of variables in line

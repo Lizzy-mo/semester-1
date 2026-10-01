@@ -21,6 +21,9 @@ for row in data:
     days = 0
     hours = 0
     minutes = 0
-    
+
+    days = days + minutes//1440
+    hours = hours + (minutes%1440)//60
+    minutes = (minutes%1440)%60
     print(f"Student {row[0]}: {days}D {hours}H {minutes}M")
 
