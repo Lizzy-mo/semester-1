@@ -26,4 +26,4 @@ try:
     print(f"the total amount of money including interest you will have saved in a year is £{total_interest:.2f}")
 
 except:
-    print("invalid input")
+    print("Invalid amount")
