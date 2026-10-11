@@ -6,6 +6,8 @@ score = 0
 grade = "" 
 
 try:
+    if score < 0 or score > 100:
+        sys.exit("Error: Grade must be an integer between 0 and 100")
     score = int(input("what score did you get out of 100"))
     
     if score <=39:
