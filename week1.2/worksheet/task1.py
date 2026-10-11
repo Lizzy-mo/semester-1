@@ -1,10 +1,10 @@
 # Worksheet 1.2: Task 1 Solution
 import sys
 # variables
-name = ""
+
 score = 0
 grade = "" 
-name = str(input("what is your name"))
+
 try:
     score = int(input("what score did you get out of 100"))
     
