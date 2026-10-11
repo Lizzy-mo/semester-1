@@ -7,8 +7,8 @@ grade = ""
 name = str(input("what is your name"))
 try:
     score = int(input("what score did you get out of 100"))
-    score >=0 and score <= 100
-    if score <39:
+    
+    if score <=39:
         grade = "Fail"
     elif score >=40 and score <=69:
         grade = "Pass"
