@@ -15,6 +15,6 @@ for i in range (0,len(numbers)):
     current = numbers[i]
     total = total+current
 mean = total/len(numbers)
-median = numbers[len(numbers)//2]
-print(f" Minimum = {min}\n Maximum = {max}\n Mean = {mean}\n Median = {median}")
+median = numbers[(len(numbers))//2]
+print(f"Minimum = {min}\nMaximum = {max}\nMean = {mean}\nMedian = {median}")
 
