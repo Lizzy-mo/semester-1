@@ -1,9 +1,11 @@
 # Week 1.3, Session 1: Task 2a
-
+data = True
 k = 2
-while True:
+while data:
     k = 2 * k 
     print(k)
+    if k > 200:
+        data = False
     
 
 # As written this is an infinite loop.
