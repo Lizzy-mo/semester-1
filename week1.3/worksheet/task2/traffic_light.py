@@ -14,19 +14,7 @@ print (state_list)
 print(f"Time {systime:03} State {state}")
 
 # Simulate the traffic light system up to time=maxtime in 1-second steps
-for i in range(0,maxtime):
-    state_count = states.get(state)
-    print_loop_count = state_count
-    nxt_state = next(state_list, None) 
-    while state_count >=0 and state_count != None:
-        for k in range(1,print_loop_count):
-            systime = systime + 1
-            print(f"Time {systime:03} State {state}")
-            state_count = state_count-1
-            
-        systime = systime + k 
-    nxt_state = next(state_list, None) 
-    state = nxt_state
+
             
     
   
