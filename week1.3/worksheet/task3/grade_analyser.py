@@ -3,17 +3,46 @@
 # Your code for the overall grade classification
 
 # ask for filename of the student file
+filename = input("Enter student file name: ")
 
-# open the file
+# open the file and read the data
+with open(filename) as f:
+    lines = f.readlines()
 
-# read in the data, and for each student calculate their average grade and classification
+# output filename
+out_filename = filename + "_out.csv"
+
+# process each student and write results
+with open(out_filename, "w") as out:
+    for line in lines:
+        line = line.strip()
+        if not line:
+            continue
+        parts = line.split(",")
+        student_id = parts[0]
+        # collect only the non-empty grade values
+        grades = [int(g) for g in parts[1:] if g.strip() != ""]
+        
+        # calculate the mean average
+        avg = sum(grades) / len(grades)
+        
+        # determine the classification
+        if avg >= 70:
+            classification = "1"
+        elif avg >= 60:
+            classification = "2:1"
+        elif avg >= 50:
+            classification = "2:2"
+        elif avg >= 40:
+            classification = "3"
+        else:
+            classification = "F"
+        
+        # write out student_id,average_grade,classification
+        out.write(f"{student_id},{avg:.2f},{classification}\n")
 
 
 
-# write out this calculated data in the format without a header:
-#      student_id,average_grade,classification - replace this with actual value
-#      The average grade should be given to 2 decimal places
-#      this can be achieved by using the following in an fstring: {variable_name:.2f}
 
 
 # write this data out to a file named input_file_name + _out.csv - e.g. the input file name 'student_data.csv' -> 'student_data.csv_out.csv'

@@ -4,21 +4,23 @@ By submitting this code you are declaring that all work in this file, other than
 Name: 
 """
 
-states = { "red":4, "red_amber":3, "green":5, "amber":3 }
+states = {"red": 4, "red_amber": 3, "green": 5, "amber": 3}
 
-systime = 0
 maxtime = int(input())  # read an integer number of steps (>0)
 state = "red"
-state_list = states.__iter__()
-print (state_list)
-print(f"Time {systime:03} State {state}")
+state_order = ["red", "red_amber", "green", "amber"]  # cycle order
+index = 0
+time_in_state = 0
 
 # Simulate the traffic light system up to time=maxtime in 1-second steps
+for systime in range(maxtime + 1):
+    print(f"Time {systime:03} State {state}")
 
-            
-    
-  
-    
-    
-    
-# At the end of each step you should output the time and state using the statement on line 14
+    # increment the time-in-state counter
+    time_in_state += 1
+
+    # If state's duration is complete, move to the next state
+    if time_in_state >= states[state]:
+        index = (index + 1) % len(state_order)
+        state = state_order[index]
+        time_in_state = 0

@@ -11,10 +11,15 @@ if length_of_list == 0:
 total = 0
 min = numbers[0]
 max = numbers[len(numbers)-1]
-for i in range (0,len(numbers)):
+for i in range(0, len(numbers)):
     current = numbers[i]
-    total = total+current
-mean = total/len(numbers)
-median = numbers[(len(numbers))//2]
+    total = total + current
+mean = total / len(numbers)
+# median needs to handle both even and odd length lists
+if length_of_list % 2 == 0:
+    median = (numbers[length_of_list // 2 - 1] + numbers[length_of_list // 2]) / 2
+else:
+    median = numbers[length_of_list // 2]
 print(f"Minimum = {min}\nMaximum = {max}\nMean = {mean}\nMedian = {median}")
+
 
