@@ -18,10 +18,14 @@ def currency_converter(amount, from_currency, to_currency):
         'INR': {'PHP': 0.69, 'CNY': 0.09, 'GBP': 0.01}
     }
 
-    # your code here
+    if amount < 0:
+        return 0.0
+
     multiplier = conversion_rate[from_currency][to_currency]
-    result = amount*multiplier
-    print(result)
+    converted_amount = amount * multiplier
+
+    return round(converted_amount, 2)
+
 
 # Submit only this file currency_converter.py with the completed function.
 
