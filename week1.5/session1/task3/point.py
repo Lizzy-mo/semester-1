@@ -2,12 +2,22 @@
 
 class Point:
     """
-    A Point in 2D space.
+    A point in 2D space.
+
     """
 
-    # Add constructor here
+    def __init__(self,x_coordinate, y_coordinate):
+        """
+        Creates a Point, given x & y coordinates.
+        """
+        self.x = x_coordinate
+        self.y = y_coordinate
 
-    # Add distance() method here
+
+p = Point(1.5, 2.0)
+print(p.x)
+print(p.y)
+
 
     # Add distance_to() method here
     # (This will need a parameter representing another point)
