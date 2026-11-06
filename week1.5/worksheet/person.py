@@ -15,10 +15,11 @@ class Person:
         if name == "":
             raise ValueError("name must not be an empty string")
         if not isinstance(birth, date):
-            raise ValueError("birth must be a date")
+            raise TypeError("birth must be a date")
         
         self.name = name
-        self.birth = birth
+        self.birth = birth# this is not in my push
+
 
             
     def initials(self):
@@ -37,6 +38,9 @@ class Person:
         #return initials
         #//////////////////////////////////////////
         #much more siccinct way to do it, looked over python comands for strings again
+        """
+        Returns the initials of the person's name.
+        """
         return "".join(word[0].upper() for word in self.name.split())
 
     def is_birthday(self):
