@@ -16,6 +16,9 @@ class Person:
             raise ValueError("name must not be an empty string")
         if not isinstance(birth, date):
             raise ValueError("birth must be a date")
+        
+        self.name = name
+        self.birth = birth
 
             
     def initials(self):
