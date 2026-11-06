@@ -12,6 +12,28 @@ class Rectangle:
         # raising appropriate exceptions if necessary (see README.md)
         self.width = width
         self.height = height
+        try:
+            width == int(width)
+            height == int(height)
+        except:
+            print('TypeError')
+        try:
+            width >= 0
+            height >=0
+        except:
+            print('ValueError')
+    def isSquare(self):
+        if self.width == self.height:
+            return True
+        else:
+            return False
+    def area(self):
+        area = self.width*self.height
+        return area
+    def perimeter(self):
+        perimeter = (self.width*2)+(self.height*2)
+        return perimeter
+
 
     # Implement methods is_square(), area() & perimeter() here
     # (See README.md for details of what they should do)
