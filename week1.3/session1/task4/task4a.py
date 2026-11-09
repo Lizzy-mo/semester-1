@@ -2,7 +2,8 @@
 
 sum = 0
 
-for k in range(1,10):
+for k in range(1,21):
+    print(sum)
     sum = sum + k ** 2
 
 print(sum)

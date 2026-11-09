@@ -6,6 +6,7 @@ while data:
     print(k)
     if k > 200:
         data = False
+        break
     
 
 # As written this is an infinite loop.
