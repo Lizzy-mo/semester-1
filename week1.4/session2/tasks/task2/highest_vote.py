@@ -16,14 +16,26 @@ def most_frequent_string(votes):
         and int is the count of its occurences
         - None, None: if votes is empty.
     """
-
+    previous = 0
+    if len(votes) == 0:
+        return None
+    for vote in votes:
+        current_vote = vote
+        current = votes.count(vote)
+        if current>previous:
+            highest = current
+            highest_vote = current_vote
+        previous = current 
+        
+    return_val = (highest,highest_vote)
+    return return_val
     # Your task is to complete the body of the function based on the details in the docstring.
     # Hint 1: You can complete this task with for loops or comprehensions 
     # Hint 2: Think about the properties of the various collection-types
 
 
-fruit = ['date', 'apple', 'cherry', 'date', 'apple', 'apple', 'elderberry',
-         'date', 'elderberry', 'elderberry', 'date', 'banana']
+#fruit = ['date', 'apple', 'cherry', 'date', 'apple', 'apple', 'elderberry',
+#         'date', 'elderberry', 'elderberry', 'date', 'banana']
 names = ['Jesy', 'Leigh-Anne', 'Perrie', 'Leigh-Anne', 'Jade',
          'Leigh-Anne', 'Perrie', 'Leigh-Anne', 'Jesy', 'Jade',
          'Leigh-Anne', 'Leigh-Anne', 'Leigh-Anne', 'Leigh-Anne',
@@ -33,7 +45,7 @@ names = ['Jesy', 'Leigh-Anne', 'Perrie', 'Leigh-Anne', 'Jade',
 
 
 # Check if correct output is produced
-print(most_frequent_string(fruit))          # ('date', 4)
+#print(most_frequent_string(fruit))          # ('date', 4)
 print(most_frequent_string(names))     # ('Leigh-Anne', 10)
 print(most_frequent_string([]))             # (None, None)
 

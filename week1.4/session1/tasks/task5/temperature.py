@@ -31,3 +31,8 @@ def celsius_to_fahrenheit(celsius):
 celsius = float(input("Enter temperature in Celsius: "))
 
 # Complete the rest of the code here
+if valid_temperature(celsius)==true:
+    result = celsius_to_fahrenheit(celsius)
+    print("the temperature in farenheight is ",result)
+else:
+    print("input not in range")

@@ -7,8 +7,9 @@
 def power(x, n):
     # complete your code here
     # base case
-
+    n = 5
     # recursive case
 
 
-# Once completed, make at least two function calls to test the power function
+    # Once completed, make at least two function calls to test the power function
+    

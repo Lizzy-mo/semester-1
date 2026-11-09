@@ -14,10 +14,14 @@ def countdown(n):
         None, prints the countdown sequence from n to 0.
     """
 
-    # Complete your code here
     # base case
+    if n < 0:
+        return None
+
+    print(n)
 
     # recursive case
+    countdown(n - 1)
 
 
 # check if correct output is produced

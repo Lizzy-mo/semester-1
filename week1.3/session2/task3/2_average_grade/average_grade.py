@@ -2,8 +2,8 @@
 
 # Open 'student_data.csv' to read each student's grades
 # hint: skip the header row with data[1:]
-
-
+file = open("student_data.csv")
+file.data[1:]
 # Read each student's grades and calculate their average grade
 # hint: CSV data comes as strings, convert grade columns to int() for maths
 # hint: student_data.csv has columns: ID, Name, Mathematics, Science, History
@@ -14,3 +14,20 @@
 # Write each student's name and their average grade to the report
 # hint: use 'w' mode to create a fresh report each time
 # hint: format averages nicely, maybe to 2 decimal places with :.2f
+import csv
+
+# Open 'student_data.csv' and skip the header row
+with open("student_data.csv", newline="") as file:
+    data = list(csv.reader(file))
+
+for row in data[1:]:
+    student_id, name, maths, science, history = row
+    average = (int(maths) + int(science) + int(history)) / 3
+    print(f"{name}: {average:.2f}")
+
+# Write each student's name and average to a fresh report
+with open("report.txt", "w") as report:
+    for row in data[1:]:
+        student_id, name, maths, science, history = row
+        average = (int(maths) + int(science) + int(history)) / 3
+        report.write(f"{name}: {average:.2f}\n")

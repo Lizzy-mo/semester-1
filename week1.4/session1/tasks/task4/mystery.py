@@ -13,7 +13,10 @@
 def mystery_func(string):
     upper = 0
     lower = 0
-
+    """
+    counts up how many ppercase/ 
+    lowercase characters are in the input string
+    """
     for ch in string:
         if ch.isupper():
             upper += 1

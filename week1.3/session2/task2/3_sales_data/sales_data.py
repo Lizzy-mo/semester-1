@@ -3,6 +3,21 @@
 # We want to analyse a set of sales data in sales.csv
 
 # Open the file and read the data
+file =open ("sales.csv")
+morelines = True
+count = 0
+while morelines == True:
+    current = file.readline()
+    current_list = current.split(",")
+    sale_day = current_list[3]
+    if sale_day > previous:
+        highest = sale_day
+    total = total + sale_day
+    if file.readline() == "\n":
+        morelines = False
+    previous = sale_day 
+    count +=1
+
 # find the:
 #   - largest sale day (highest sale amount)
 #   - average sale amount
