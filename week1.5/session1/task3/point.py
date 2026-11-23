@@ -13,7 +13,12 @@ class Point:
         self.x = x_coordinate
         self.y = y_coordinate
 
+    def functon distance_to(origin_point):
+        distance = (y - origin_point(y))
+    return distance 
 
+    
+P_ = Point(0,0)
 p = Point(1.5, 2.0)
 print(p.x)
 print(p.y)
